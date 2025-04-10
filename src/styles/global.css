@@ -46,6 +46,16 @@ h1,
 h2,
 h3 {
   font-weight: 700;
+  margin: var(--big-padding) 0;
+}
+
+h2 {
+  font-size: var(--big-font);
+}
+
+h3 {
+  padding-left: var(--small-padding);
+  border-left: solid 3px var(--dark-color);
 }
 
 html,
