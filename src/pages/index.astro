@@ -1,11 +1,107 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title="hujbvf"
+  description="作ったもの、作っているものを紹介するサイトです。"
+  index={true}
+>
+  <article class="symbol">
+    <img src="/imgs/top/symbol.svg" alt="hujbvf" />
+  </article>
+
+  <div class="hr"></div>
+
+  <article class="catch">
+    <p>絵をかいたり、</p>
+    <p>アプリをつくったり、</p>
+  </article>
+
+  <div class="hr"></div>
+
+  <article class="product">
+    <a href="https://msrnote.com/" class="thumb">
+      <img src="/imgs/top/msrnote.svg" alt="MsrNote" />
+    </a>
+    <div class="desc">
+      <span class="outline">
+        <p>ノートをかくように簡単にWebサイトが作れるアプリ。</p>
+      </span>
+      <span class="log">
+        <p>2025.06.01　β版をリリース</p>
+        <p>2025.07.01　正式版をリリース</p>
+      </span>
+      <span class="links">
+        <a href="https://msrnote.com/">⇒　Web サイト</a>
+        <a href="https://note.com/hujbvf/m/m00ca23bb9183">⇒　開発ログ</a>
+        <a href="https://github.com/hujbvf/msrnote">⇒　リポジトリ</a>
+      </span>
+    </div>
+  </article>
+
+  <div class="hr"></div>
+
+  <article class="product">
+    <a href="/portfolio/" class="thumb">
+      <img class="pixel" src="/imgs/top/portfolio.png" alt="ポートフォリオ" />
+    </a>
+    <div class="desc">
+      <span class="outline">
+        <p>過去に描いた油絵やイラストなど、平面作品のポートフォリオ。</p>
+      </span>
+      <span class="log">
+        <p>2024.12.08　ポートフォリオページ公開</p>
+        <p>2024.12.08　ポートフォリオページ最終更新</p>
+      </span>
+      <span class="links">
+        <a href="/portfolio/">⇒　ポートフォリオページ</a>
+      </span>
+    </div>
+  </article>
 </Layout>
+
+<style>
+  .symbol img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .catch {
+    padding: 0 var(--big-padding);
+  }
+
+  .product {
+    padding: 0 var(--base-padding);
+  }
+
+  .product .thumb img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    border: solid 1px var(--middle-color);
+  }
+  .product .thumb img.pixel {
+    image-rendering: pixelated;
+  }
+
+  .product .desc {
+    padding: var(--base-padding);
+  }
+
+  .product .desc .log::before,
+  .product .desc .log::after {
+    content: "====================";
+    display: block;
+  }
+
+  .product .desc .links a {
+    display: block;
+    text-decoration: underline;
+  }
+  .product .desc .links a:hover {
+    text-decoration: none;
+  }
+</style>

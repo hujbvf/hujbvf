@@ -1,0 +1,54 @@
+<footer>
+  <div class="menu">
+    <a href="/">ホーム</a>
+    <a href="/">利用規約</a>
+  </div>
+  <div class="connect">
+    <a href="https://github.com/hujbvf">Github</a>
+    <a href="https://note.com/hujbvf">note</a>
+  </div>
+  <div class="copyright">© hujbvf</div>
+</footer>
+
+<style>
+  footer {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: var(--base-padding) 0;
+  }
+
+  footer > div.menu,
+  footer > div.connect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    max-width: 680px;
+    margin: var(--smaller-padding) auto;
+  }
+
+  footer > div.menu > a,
+  footer > div.connect > a {
+    display: block;
+    padding: 0 var(--smaller-padding);
+    margin-left: -1px;
+    border-left: solid 1px var(--dark-color);
+    border-right: solid 1px var(--dark-color);
+    font-size: var(--small-font);
+    text-decoration: none;
+  }
+  footer > div.menu > a:hover,
+  footer > div.connect > a:hover {
+    text-decoration: underline;
+  }
+
+  footer > div.copyright {
+    margin-top: var(--base-padding);
+    font-size: var(--base-font);
+    color: var(--dark-color);
+  }
+</style>
